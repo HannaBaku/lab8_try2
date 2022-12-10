@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<html>
+<body>
+<script>
+    var x, i, xmlDoc, xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "xml.xml" , false);
+    xmlhttp.send();
+
+    xmlDoc = xmlhttp.responseXML;
+
+    document.write("<table border='1'>" +
+        "<tr><th>Номер</th><th>Студент</th><th>Оценка</th></tr>");
+    x = xmlDoc.getElementsByTagName("gradeRecord");
+    for (i = 0; i < x.length; i++){
+        var a = x[i].getElementsByTagName("grade")[0].childNodes[0].nodeValue;
+
+        document.write("<tr><td>");
+        document.write((i+1));
+        document.write("</td><td>");
+        document.write(x[i].getElementsByTagName("student")[0].childNodes[0].nodeValue);
+        document.write("</td><td>");
+        document.write(a);
+        document.write("</td></tr>");
+    }
+    document.write("<br></table>");
+
+    document.write("<table border='1'>" +
+        "<tr><th>Номер</th><th>Студент</th><th>Оценка</th></tr>");
+    x = xmlDoc.getElementsByTagName("gradeRecord");
+    for (i = 0; i < x.length; i++){
+        document.write("<tr><td>");
+        document.write((i+1));
+        document.write("</td><td>");
+        document.write( x[i].getElementsByTagName("student")[0].childNodes[0].nodeValue);
+        document.write("</td><td>");
+        a = x[i].getElementsByTagName("grade")[0].childNodes[0].nodeValue;
+        if (a == 1)
+            a = "ужас";
+        if (a == 2)
+            a = "плохо";
+        if (a == 4)
+            a = "хорошо";
+        if (a == 3)
+            a = "средне";
+        if (a == 5)
+            a = "отлично";
+        document.write(a);
+        document.write("</td></tr>");
+    }
+    document.write("<br></table>");
+</script>
+</body>
+</html>
