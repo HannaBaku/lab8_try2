@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<gradeReport id="120851">
+  <date>30-11-2020</date>
+  <subject>Computer Science Fundamentals</subject>
+  <examiner>Beyonce</examiner>
+  <gradeList>
+    <gradeRecord id="1">
+      <student>Shakira</student>
+      <grade>4</grade>
+    </gradeRecord>
+    <gradeRecord id="2">
+      <student>Lady Gaga</student>
+      <grade>3</grade>
+    </gradeRecord>
+    <gradeRecord id="3">
+      <student>Lana Del Rey</student>
+      <grade>5</grade>
+    </gradeRecord>
+    <gradeRecord id="4">
+      <student>Rihanna</student>
+      <grade>5</grade>
+    </gradeRecord>
+    <gradeRecord id="5">
+      <student>Sia</student>
+      <grade>5</grade>
+    </gradeRecord>
+  </gradeList>
+</gradeReport>
+
